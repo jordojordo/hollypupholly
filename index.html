@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="jquery-3.3.1.js"></script>
     <!-- <script src="script.js"></script> -->
   </head>
 
   <header>
 
-    <div class="nav-bar">
+    <div id="top-nav" class="nav-bar">
       <a href="">Lorem</a>
       <a href="">Ipsum</a>
       <a href="">Dolor</a>
       <a href="">Sit</a>
+      <a href="javascript:void(0);" class="icon" onclick="resNav()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
 
   </header>
@@ -94,6 +98,15 @@
     span.onclick = function() {
       modal.style.display = "none";
     }
+
+  function resNav() {
+    let x = document.getElementById("top-nav");
+    if (x.className === "nav-bar") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav-bar";
+    }
+  }
 
   </script>
 
