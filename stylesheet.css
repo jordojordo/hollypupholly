@@ -1,1 +1,64 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.nav-bar {
+  overflow: hidden;
+  background-color: #d0bfd9;
+}
+
+.nav-bar a {
+  float: left;
+  display: block;
+  color: #f6f6f6;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 14px 16px;
+}
+
+.nav-bar a:hover {
+  background-color: #e8dfec;
+  color: #595959;
+}
+
+/* Main grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 20px;
+  background: #f6f6f6;
+}
+
+/* Blog Title */
+.header {
+  margin-top: 20px;
+  padding: 30px;
+  font-size: 34px;
+  text-align: center;
+  background: #fdfdfd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+              0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Main Posts */
+.card {
+  padding: 40px;
+  background: #fdfdfd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+              0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+}
 
