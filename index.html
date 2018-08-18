@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="jquery-3.3.1.js"></script>
+    <!-- <script src="script.js"></script> -->
   </head>
 
   <header>
@@ -25,17 +27,50 @@
         <h2>Holly Pup Holly</h2>
       </div>
 
-      <div class="card">
-        <h2>Title Heading</h2>
-        <h5>Title Description, Aug 18, 2018</h5>
-        <img src="Images/img001.jpg"  class="card-img">
+      <div id="blog-card">
+        <div class="card">
+          <h2>Title Heading</h2>
+          <h5>Title Description, Aug 18, 2018</h5>
+          <img src="Images/img001.jpg"  class="card-img" alt="Millenial Issues">
+        </div>
+
+        <div class="card">
+          <h2>Title Heading</h2>
+          <h5>Title Description, Aug 18, 2018</h5>
+          <img src="Images/img002.jpg"  class="card-img" alt="Rabbit girl skates">
+        </div>
+
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="m-img">
+          <div id="caption"></div>
+        </div>
       </div>
-      
-      <div class="card">
-        <h2>Title Heading</h2>
-        <h5>Title Description, Aug 18, 2018</h5>
-        <img src="Images/img002.jpg"  class="card-img">
-      </div>
+
+  <script>
+    // Get the modal
+    let modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use it's alt text as Caption
+    let img = $('.card-img');
+    let modalImg = $("#m-img");
+    let captionText = document.getElementById('caption');
+    $('.card-img').click(function() {
+      modal.style.display = "block";
+      let newSrc = this.src;
+      modalImg.attr('src', newSrc);
+      captionText.innerHTML = this.alt;
+    });
+
+    // Get the span element that closes the modal
+    let span = document.getElementsByClassName("close")[0];
+
+    // When user clicks on span (x), close Modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+  </script>
+
   </body>
 </html>
-
