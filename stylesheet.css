@@ -34,8 +34,14 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: auto;
-  grid-gap: 20px;
+  grid-gap: 10px;
   background: #f6f6f6;
+}
+
+.second-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
 }
 
 /* Blog Title */
@@ -50,6 +56,14 @@ body {
 }
 
 /* Main Posts */
+.leftcolumn {
+  grid-area: 1 / 1 / 3 / 6;
+}
+
+.rightcolumn {
+  grid-area: 1 / 6 / 2 / 6;
+}
+
 .card {
   padding: 40px;
   background: #fdfdfd;
@@ -60,6 +74,14 @@ body {
 .card-img {
   width: 100%;
   height: auto;
+}
+
+.left-card {
+  margin-bottom: 10px;
+}
+
+.right-card {
+  margin-bottom: 10px;
 }
 
 /* The Modal (background) */
